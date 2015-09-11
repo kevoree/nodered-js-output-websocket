@@ -1,0 +1,30 @@
+{
+  "name": "kevoree-comp-websocketout",
+  "version": "1.0.0",
+  "main": "./lib/WebSocketOut.js",
+  "kevoree": {
+    "package": "org.nodered"
+  },
+  "scripts": {
+    "prepublish": "grunt",
+    "postpublish": "grunt publish"
+  },
+  "keywords": [
+    "kevoree",
+    "library",
+    "comp",
+    "node-red",
+    "websocket",
+    "websocketout"
+  ],
+  "dependencies": {
+    "kevoree-entities": "^8.0.0",
+    "ws": "^0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-kevoree": "^5.0.0",
+    "grunt-kevoree-genmodel": "^2.0.0",
+    "grunt-kevoree-registry": "^2.0.0"
+  }
+}

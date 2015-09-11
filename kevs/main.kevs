@@ -1,0 +1,15 @@
+add node0 : JavascriptNode
+add sync : WSGroup
+add node0.wsOut : org.nodered.WebSocketOut
+add node0.ticker: Ticker
+add chan: LocalChannel
+
+attach node0 sync
+
+set sync.master = 'node0'
+set node0.logLevel = 'DEBUG'
+set node0.wsOut.connectTo = 'true'
+set node0.wsOut.url = 'ws://ws.kevoree.org/dredre'
+
+bind node0.wsOut.in chan
+bind node0.ticker.tick chan
