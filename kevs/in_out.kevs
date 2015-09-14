@@ -1,0 +1,18 @@
+add node0 : JavascriptNode
+add node0.wsIn : org.nodered.WebSocketIn
+add node0.wsOut : org.nodered.WebSocketOut
+add node0.ticker : Ticker
+add node0.printer : ConsolePrinter
+add sync : WSGroup
+add chan, chan1 : LocalChannel
+
+attach node0 sync
+
+bind node0.ticker.tick chan
+bind node0.wsOut.in chan
+bind node0.printer.input chan1
+bind node0.wsIn.out chan1
+
+set node0.logLevel = 'info'
+set node0.wsIn.url = 'ws://ws.kevoree.org/test'
+set node0.wsOut.url = 'ws://ws.kevoree.org/test'

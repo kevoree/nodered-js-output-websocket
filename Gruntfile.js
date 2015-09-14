@@ -4,6 +4,14 @@ module.exports = function(grunt) {
     // retrieve your project package.json
     pkg: grunt.file.readJSON('package.json'),
 
+    kevoree: {
+      options: {
+        mergeLocalLibraries: [
+          '../../../input/websocket/js'
+        ]
+      }
+    },
+
     // creates kevlib.json which represents your project Kevoree model
     // by parsing your pkg.main entry point
     kevoree_genmodel: {
