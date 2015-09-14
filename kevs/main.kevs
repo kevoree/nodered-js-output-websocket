@@ -9,7 +9,7 @@ attach node0 sync
 set sync.master = 'node0'
 set node0.logLevel = 'DEBUG'
 set node0.wsOut.connectTo = 'true'
-set node0.wsOut.url = 'ws://ws.kevoree.org/dredre'
+set node0.wsOut.url = 'ws://ws.kevoree.org/test'
 
 bind node0.wsOut.in chan
 bind node0.ticker.tick chan
